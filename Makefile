@@ -27,12 +27,15 @@ SIM_SRC=$(addprefix sim/, \
 	tt_um_test.v \
 )
 
-SIM_SRC+=$(addprefix pg/, \
-	tt_pg_vdd_1/tt_pg_vdd_1.v \
-	tt_pg_vdd_2/tt_pg_vdd_2.v \
+SIM_SRC+=$(addprefix pg/sky130/, \
+	tt_pg_1v8_1/src/tt_pg_1v8_1.v \
+	tt_pg_1v8_2/src/tt_pg_1v8_2.v \
+	tt_pg_1v8_4/src/tt_pg_1v8_4.v \
 )
-SIM_SRC+=$(addprefix asw/, \
-	tt_asw.v \
+
+SIM_SRC+=$(addprefix asw/sky130/, \
+	tt_asw_1v8/src/tt_asw_1v8.v \
+	tt_asw_3v3/src/tt_asw_3v3.v \
 )
 
 PRIM_SRC=$(addprefix rtl/prim_$(TECH)/, \
