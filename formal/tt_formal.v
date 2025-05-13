@@ -16,9 +16,9 @@ module tt_formal;
 	// -------
 
 	// DUT signals
-	wire [37:0] io_in;
-	wire [37:0] io_out;
-	wire [37:0] io_oeb;
+	wire [43:0] io_in;
+	wire [43:0] io_out;
+	wire [43:0] io_oeb;
 	wire        k_zero;
 	wire        k_one;
 
