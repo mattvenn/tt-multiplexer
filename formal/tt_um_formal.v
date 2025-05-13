@@ -26,13 +26,17 @@ module tt_um_formal (
     always @(*) begin
         if(ena) begin
             // if design is enabled, looped back inputs must = outputs
+            assert(ui_in == uo_out);
 
         end else begin
             // otherwise inputs must be 0
-	    
+            assert(ui_in == 0);
+
             // design is in reset 
-	    
+            assert(rst_n == 0);
+
             // no clock
+            assert(clk == 0);
 
         end
     end
