@@ -123,17 +123,16 @@ module tt_user_module #(
 %  endif
 		end
 % endfor
-
+		case ({MUX_ID[15:0], BLK_ID[15:0]})
 % for (mux_id, blk_id) in grid.keys():
-		if ((MUX_ID == ${mux_id}) && (BLK_ID == ${blk_id}))
-		begin
-		end
-		else
+	{ 16'd${mux_id}, 16'd${blk_id} }: 
+	begin end
 % endfor
-		begin
+	default: begin
 			// Tie-off
 			assign ow = { N_OW{k_zero} };
-		end
+			end
+endcase
 	endgenerate
 
 endmodule // tt_user_module
