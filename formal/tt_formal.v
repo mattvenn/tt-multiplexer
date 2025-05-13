@@ -26,14 +26,7 @@ module tt_formal;
 	// DUT
 	// ---
 
-	tt_top #(
-		.N_PADS (44),
-        .G_X    (16),
-		.G_Y    (24),
-		.N_IO   (8),
-		.N_O    (8),
-		.N_I    (10)
-	) dut_I (
+	tt_top dut_I (
 		.io_in       (io_in),
 		.io_out      (io_out),
 		.io_oeb      (io_oeb),
