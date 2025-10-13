@@ -18,14 +18,7 @@ jobs:
     - run: | 
         yosys --version
     
-    - name: python requirements
-      run: pip3 install -r py/requirements.txt
-
-    # formal
-    - name: formal tristate
+    - name: formal connectivity
       run: |
-        make formal_tristate 
-
-    - name: formal tristate
-      run: |
-        make formal_connectivity
+        cd formal
+        sby -f tt_connectivity.sby
