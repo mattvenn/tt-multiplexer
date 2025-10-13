@@ -49,7 +49,7 @@ module tt_formal;
     */
 
     // loop back dedicated outs to ins
-    assign { io_in[13], io_in[6:0] } = io_out[31:24];
+    assign { io_in[13], io_in[6:0] } = {io_out[31:23], 1'b0};
 
     // loop back bidirectional outs to ins, depending on output enable
     assign io_in[23:16] = io_out[23:16] & (~io_oeb[23:16]);
